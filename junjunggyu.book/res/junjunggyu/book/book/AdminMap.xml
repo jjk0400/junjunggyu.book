@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="junjunggyu.book.book.dao.mapper.AdminMapper">
+	<select id="getAdmin" parameterType="string" resultType="admin">
+		select admin_id adminId, admin_password adminPw, admin_name adminName, admin_num adminNum
+		from admin
+		where admin_id=#{adminId}
+	</select>
+</mapper>
