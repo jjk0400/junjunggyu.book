@@ -16,4 +16,12 @@ public class BoardServiceImpl implements BoardService {
 	public List<Board> getBoards() {
 		return boardDao.getBoards();
 	}
+	
+	public boolean addBoard(Board board) {
+		return boardDao.addBoard(board) > 0;
+	}
+	
+	public Board getBoard(int boardNum) {
+		return boardDao.getBoard(boardNum);
+	}
 }

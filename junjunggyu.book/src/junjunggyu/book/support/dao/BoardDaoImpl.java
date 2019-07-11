@@ -16,4 +16,12 @@ public class BoardDaoImpl implements BoardDao{
 	public List<Board> getBoards() {
 		return boardMapper.getBoards();
 	}
+	
+	public int addBoard(Board board) {
+		return boardMapper.addBoard(board);
+	}
+	
+	public Board getBoard(int boardNum) {
+		return boardMapper.getBoard(boardNum);
+	}
 }

@@ -5,11 +5,17 @@ import java.sql.Date;
 public class Board {
 	private String boardTitle;
 	private String boardContent;
-	private Date boardData;
+	private Date boardDate;
 	private String boardUserId;
 	private int boardNum;
 	
 	public Board(){}
+	
+	public Board(String boardTitle, String boardContent, String boardUserId) {
+		this.boardTitle = boardTitle;
+		this.boardContent = boardContent;
+		this.boardUserId = boardUserId;
+	}
 
 	public String getBoardTitle() {
 		return boardTitle;
@@ -27,12 +33,12 @@ public class Board {
 		this.boardContent = boardContent;
 	}
 
-	public Date getBoardData() {
-		return boardData;
+	public Date getBoardDate() {
+		return boardDate;
 	}
 
-	public void setBoardData(Date boardData) {
-		this.boardData = boardData;
+	public void setBoardDate(Date boardDate) {
+		this.boardDate = boardDate;
 	}
 
 	public String getBoardUserId() {

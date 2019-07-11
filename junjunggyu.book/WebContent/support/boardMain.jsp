@@ -9,6 +9,7 @@
 	List<Board> boards = null;
 	
 	boards = boardService.getBoards();
+	pageContext.setAttribute("boards", boards);
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -112,17 +113,22 @@ th {
 				<tbody>
 				<c:forEach var="board" items="${boards}">
 					<tr>
-						<td id="tdC">${boardNum}</td>
-						<td colspan="2"><a href="03.html">${boardTitle}</a></td>
-						<td id="tdC">${boardDate}</td>
+						<td id="tdC">${board.boardNum}</td>
+						<td colspan="2"><a href="boardIn.jsp?num=${board.boardNum}">${board.boardTitle}</a></td>
+						<td id="tdC">${board.boardDate}</td>
 					</tr>
 				</c:forEach>	
 				</tbody>
 			</table>
-			
+			<% 		
+				if(session.getAttribute("userId") != null) {
+			%>
 			<div>
-				<a id="btnA" type="button" class="btn btn-default" href="02.html">글쓰기</a>
+				<a id="btnA" type="button" class="btn btn-default" href="boardadd.jsp">글쓰기</a>
 			</div>
+			<%
+				}
+			%>
 			<br>
 			<div id="btnP"  class="btn-group">
 				<button type="button" class="btn btn-default active">1</button>

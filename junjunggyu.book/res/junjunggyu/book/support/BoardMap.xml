@@ -6,5 +6,18 @@
 		select board_title boardTitle, board_content boardContent, board_date boardDate,
 			   board_user_id boardUserId, board_num boardNum
 		from board 
+		order by board_num desc
 	</select>
+	
+	<select id="getBoard" parameterType="int" resultType="board">
+		select board_title boardTitle, board_content boardContent, board_date boardDate,
+			   board_user_id boardUserId, board_num boardNum
+		from board
+		where board_num=#{boardNum}	   
+	</select>
+	
+	<insert id="addBoard" parameterType="board">
+		insert into board(board_title,board_content,board_user_id,board_num)
+		values(#{boardTitle},#{boardContent},#{boardUserId},boardnum_seq.nextval)
+	</insert>
 </mapper>
