@@ -188,6 +188,13 @@ input [type="text"] {
 	margin-left: 40px;
 	text-align: left;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    width:73px;
+}
 </style>
 </head>
 <body>
@@ -304,7 +311,7 @@ input [type="text"] {
 							</tr>
 							<tr>
 								<td id="firt">*전화번호</td>
-								<td colspan="3"><input name="tel" type="number" minlength="11"
+								<td colspan="3"><input name="tel" type="number" min="1" max="9999999999"
 									maxlength="11" placeholder="'-' 표시 없이 입력" required></td>
 							</tr>
 							<tr>

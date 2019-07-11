@@ -7,6 +7,7 @@
 	<typeAliases>
 		<typeAlias alias="user" type="junjunggyu.book.user.domain.User"/>
 		<typeAlias alias="admin" type="junjunggyu.book.book.domain.Admin"/>
+		<typeAlias alias="board" type="junjunggyu.book.support.domain.Board"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -24,5 +25,6 @@
 	<mappers>
 		<mapper resource="junjunggyu/book/user/UserMap.xml"/>
 		<mapper resource="junjunggyu/book/book/AdminMap.xml"/>
+		<mapper resource="junjunggyu/book/support/BoardMap.xml"/>
 	</mappers>
 </configuration>

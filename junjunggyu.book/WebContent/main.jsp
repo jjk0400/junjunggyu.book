@@ -199,7 +199,7 @@ input [type="text"]{
 					</div>
 					
 					<div class="btn-group">
-						<a href="buy/03.html" type="button" class="btn btn-default" type="button" >고객지원</a>	
+						<a href="support/boardMain.jsp" type="button" class="btn btn-default" type="button" >고객지원</a>	
 					</div>
 					
 				</div>
