@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>로그인화면</title>
+<title>비번수정</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-<script src="../res/js/alert.js"></script>
+
 <style>
 
 	.container{
@@ -75,20 +75,17 @@
 	
 	#userId{
 		margin-left:35px;
-		margin-right:5px;
-		float:left;
+		margin-right:120px;
 	}
 	#login{
-		margin-top:19.5px;
-		width:110px;
-		height:108px;
-		font-size:24px;
+		margin-left:45%;
+		width:100px;
 	}
 	
 	#join{
-		width:200px;
+		width:220px;
 		font-size:24px;
-		margin-left:20px;
+		margin-left:35%;	
 	}
 	
 #foot123{
@@ -127,8 +124,9 @@
 			<div id="title">
 				
 				<div id="loginBar">
-					<a href="login.jsp"><span>로그인&nbsp;|&nbsp;</span></a>
-					<a href="sign.html"><span>회원가입&nbsp;|&nbsp;</span></a>
+					<a href="04.html"><span>로그인&nbsp;|&nbsp;</span></a>
+					<a href="01.html"><span>회원가입&nbsp;|&nbsp;</span></a>
+					
 				</div>
 				<br>
 				
@@ -167,25 +165,31 @@
 					</div>
 				<form>
 				<div>
-					<h2 style="text-align:center">LOGIN</h2>
-					<h2 id="userId" style="text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;아이디 : 
-						<input name="userId"  type="text" value="">
-					</h2>
-					<h2 id="userId" style="text-align:right">비밀번호 : 
-						<input name="userPw" type="password" value="">
-					</h2>
-				<button id="login" type="submit" class="btn btn-default" formaction="action/loginAction.jsp">로그인</button>	
+				<br>
+				<br>
+					<h3 id="userId"style="text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;새로운 비밀번호 : 
+						<input name="pw1" type="password" minlength="8"
+									maxlength="10" placeholder="비밀번호 입력" required>
+					</h3>
+					<h3 id="userId"style="text-align:right">새로운 비밀번호 확인 : 
+						<input name="pw2" type="password" minlength="8"
+									maxlength="10" placeholder="비밀번호 입력 확인" required>
+					</h3>
+					<br>
+					<br>
+					<div>
+						<button id="login" class="btn btn-default" type="submit" formaction="action/pwchangeAction.jsp">확인</button>	
+					</div>
+				
 				</div>
+				
 				</form>
 				<div>
 				<br>
-					<button id="join" type="button" onclick="location.href ='sign.html'" class="btn btn-default">회원 가입</button>
-					<button id="join" type="button" onclick="location.href ='05.html'" class="btn btn-default">아이디 찾기</button>
-					<button id="join" type="button" onclick="location.href ='pwfind.jsp'" class="btn btn-default">비밀번호 찾기</button>
 				</div>
 			</div>
 		</div>
-		
+		<br>
 		<div id="footer">
 			<div id="footNab">
 				<div id="foot123">
@@ -212,7 +216,6 @@
 				</div>
 			<hr>	
 		</div>
-		
 	</div>
 </body>
 </html>

@@ -3,13 +3,18 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>로그인화면</title>
+<title>비밀번호찾기</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script src="../res/js/alert.js"></script>
+
+
 <style>
 
 	.container{
@@ -86,9 +91,9 @@
 	}
 	
 	#join{
-		width:200px;
+		width:220px;
 		font-size:24px;
-		margin-left:20px;
+		margin-left:35%;	
 	}
 	
 #foot123{
@@ -128,12 +133,13 @@
 				
 				<div id="loginBar">
 					<a href="login.jsp"><span>로그인&nbsp;|&nbsp;</span></a>
-					<a href="sign.html"><span>회원가입&nbsp;|&nbsp;</span></a>
+					<a href="add.jsp"><span>회원가입&nbsp;|&nbsp;</span></a>
+				
 				</div>
 				<br>
 				
 				<div id="logo">
-					<a href="../main.html">로고입니다.</a>		
+					<a href="../main.jsp">로고입니다.</a>		
 				</div>
 				
 				<div id="searchBar">
@@ -167,21 +173,20 @@
 					</div>
 				<form>
 				<div>
-					<h2 style="text-align:center">LOGIN</h2>
-					<h2 id="userId" style="text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;아이디 : 
-						<input name="userId"  type="text" value="">
+					<h2 style="text-align:center">비밀번호 찾기</h2>
+					<h2 id="userId"style="text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;아이디 : 
+						<input name="id" type="text" minlength="4"
+									maxlength="8" placeholder="아이디 입력" required>
 					</h2>
-					<h2 id="userId" style="text-align:right">비밀번호 : 
-						<input name="userPw" type="password" value="">
+					<h2 id="userId"style="text-align:right">전화번호 : 
+						<input name="tel" type="text" minlength="11"
+									maxlength="11" placeholder="'-' 표시 없이 입력" required>
 					</h2>
-				<button id="login" type="submit" class="btn btn-default" formaction="action/loginAction.jsp">로그인</button>	
+				<button id="login" class="btn btn-default" type="submit" formaction="action/pwfindAction.jsp">확인</button>	
 				</div>
 				</form>
 				<div>
 				<br>
-					<button id="join" type="button" onclick="location.href ='sign.html'" class="btn btn-default">회원 가입</button>
-					<button id="join" type="button" onclick="location.href ='05.html'" class="btn btn-default">아이디 찾기</button>
-					<button id="join" type="button" onclick="location.href ='pwfind.jsp'" class="btn btn-default">비밀번호 찾기</button>
 				</div>
 			</div>
 		</div>

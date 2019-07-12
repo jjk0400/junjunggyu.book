@@ -19,6 +19,23 @@
 		where user_no=#{userNo}
 	</update>
 	
+	<update id="changePw" parameterType="user">
+		update users 
+		set user_password=#{userPw} 
+		where user_id=#{userId}
+	</update>
+	
+	<update id="modifyUser" parameterType="user">
+		update users 
+		set user_password=#{userPw}, user_phone=#{userPhone}, user_gender=#{userGender}
+		where user_id=#{userId}
+	</update>
+	
+	<delete id="secedeUser" parameterType= "string">
+		delete from users 
+		where user_id=#{userId}
+	</delete>
+	
 	<delete id="delUser" parameterType="int">
 		delete users
 		where user_no=#{userNo}

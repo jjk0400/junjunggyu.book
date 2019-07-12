@@ -10,4 +10,8 @@ public interface UserMapper {
 	int addUser(User user);
 	int updateUser(int userNum);
 	int delUser(int userNum);
+		
+	int changePw(User user);
+	int modifyUser(User user);
+	int secedeUser(String userId);
 }

@@ -22,4 +22,15 @@
 	<c:when test="${param.msgId==30}">
 		<script>alert("탈퇴 실패","error");</script>
 	</c:when>
+	
+	<c:when test="${param.msgId==51}">
+		<script>alert("홈으로 이동하여 로그인 해 주세요","succes");</script>
+	</c:when>
+	<c:when test="${param.msgId==50}">
+		<script>alert("정보가 잘못 되었습니다.","error");</script>
+	</c:when>
+	<c:when test="${param.msgId==52}">
+		<script>alert("비밀번호가 일치하지 않습니다.","error");</script>
+	</c:when>
+	
 </c:choose>
