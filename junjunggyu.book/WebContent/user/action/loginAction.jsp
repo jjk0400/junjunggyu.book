@@ -44,6 +44,7 @@
 <%		
 	}else {
 		if(user.getUserPw().equals(userPw)) {
+			session.setAttribute("userId", userId);
 %>
 			<c:redirect url="../userLogin.html"/>
 <% 

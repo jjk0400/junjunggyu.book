@@ -37,4 +37,19 @@ public class UserDaoImpl implements UserDao {
 	public int delUser(int userNum) {
 		return userMapper.delUser(userNum);
 	}
+	
+	@Override
+	public int changePw(User user){
+		return userMapper.changePw(user);
+	}
+	
+	@Override
+	public int modifyUser(User user){
+		return userMapper.modifyUser(user);
+	}
+	
+	@Override
+	public int secedeUser(String userId){
+		return userMapper.secedeUser(userId);
+	}
 }

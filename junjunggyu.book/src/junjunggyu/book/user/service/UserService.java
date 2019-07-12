@@ -10,4 +10,8 @@ public interface UserService {
 	boolean addUser(User user);
 	boolean updateUser(int userNum);
 	boolean delUser(int userNum);
+	
+	boolean changePw(User user);	
+	boolean modifyUser(User user);
+	boolean secedeUser(String userId);
 }

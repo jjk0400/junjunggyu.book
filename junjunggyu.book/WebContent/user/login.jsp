@@ -127,7 +127,7 @@
 			<div id="title">
 				
 				<div id="loginBar">
-					<a href="login.html"><span>로그인&nbsp;|&nbsp;</span></a>
+					<a href="login.jsp"><span>로그인&nbsp;|&nbsp;</span></a>
 					<a href="sign.html"><span>회원가입&nbsp;|&nbsp;</span></a>
 				</div>
 				<br>
@@ -181,7 +181,7 @@
 				<br>
 					<button id="join" type="button" onclick="location.href ='sign.html'" class="btn btn-default">회원 가입</button>
 					<button id="join" type="button" onclick="location.href ='05.html'" class="btn btn-default">아이디 찾기</button>
-					<button id="join" type="button" onclick="location.href ='07.html'" class="btn btn-default">비밀번호 찾기</button>
+					<button id="join" type="button" onclick="location.href ='pwfind.jsp'" class="btn btn-default">비밀번호 찾기</button>
 				</div>
 			</div>
 		</div>

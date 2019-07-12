@@ -32,4 +32,16 @@ public class UserServiceImpl implements UserService {
 	public boolean delUser(int userNum) {
 		return userDao.delUser(userNum) >0;
 	}
+	
+	public boolean changePw(User user){	
+		return userDao.changePw(user) >0;	
+	}
+	
+	public boolean modifyUser(User user){
+		return userDao.modifyUser(user)>0;
+	}
+	
+	public boolean secedeUser(String userId){
+		return userDao.secedeUser(userId)>0;
+	}
 }
