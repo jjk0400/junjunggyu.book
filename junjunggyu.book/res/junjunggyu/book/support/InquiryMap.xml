@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="junjunggyu.book.support.dao.mapper.InquiryMapper">
+	<select id="getInquirys" resultType="inquiry">
+		select inquiry_title inquiryTitle, inquiry_content inquiryContent, inquiry_date inquiryDate,
+			   inquiry_user_id inquiryUserId, inquiry_num inquiryNum
+		from inquiry 
+		order by inquiry_num desc
+	</select>
+	
+	<select id="getInquiry" parameterType="int" resultType="inquiry">
+		select inquiry_title inquiryTitle, inquiry_content inquiryContent, inquiry_date inquiryDate,
+			   inquiry_user_id inquiryUserId, inquiry_num inquiryNum
+		from inquiry
+		where inquiry_num=#{inquiryNum}	   
+	</select>
+	
+	<insert id="addInquiry" parameterType="inquiry">
+		insert into inquiry(inquiry_title,inquiry_content,inquiry_user_id,inquiry_num)
+		values(#{inquiryTitle},#{inquiryContent},#{inquiryUserId},inquirynum_seq.nextval)
+	</insert>
+</mapper>

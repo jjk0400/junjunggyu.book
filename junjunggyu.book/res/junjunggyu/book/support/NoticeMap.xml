@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="junjunggyu.book.support.dao.mapper.NoticeMapper">
+	<select id="getNotices" resultType="notice">
+		select notice_title noticeTitle, notice_content noticeContent, notice_date noticeDate,
+			   notice_admin_id noticeAdminId, notice_num noticeNum
+		from notice 
+		order by notice_num desc
+	</select>
+	
+	<select id="getNotice" parameterType="int" resultType="notice">
+		select notice_title noticeTitle, notice_content noticeContent, notice_date noticeDate,
+			   notice_admin_id noticeAdminId, notice_num noticeNum
+		from notice
+		where notice_num=#{noticeNum}	   
+	</select>
+	
+	<insert id="addNotice" parameterType="notice">
+		insert into notice(notice_title,notice_content,notice_admin_id,notice_num)
+		values(#{noticeTitle},#{noticeContent},#{noticeAdminId},noticenum_seq.nextval)
+	</insert>
+</mapper>
