@@ -8,6 +8,8 @@
 		<typeAlias alias="user" type="junjunggyu.book.user.domain.User"/>
 		<typeAlias alias="admin" type="junjunggyu.book.book.domain.Admin"/>
 		<typeAlias alias="board" type="junjunggyu.book.support.domain.Board"/>
+		<typeAlias alias="notice" type="junjunggyu.book.support.domain.Notice"/>
+		<typeAlias alias="inquiry" type="junjunggyu.book.support.domain.Inquiry"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -26,5 +28,7 @@
 		<mapper resource="junjunggyu/book/user/UserMap.xml"/>
 		<mapper resource="junjunggyu/book/book/AdminMap.xml"/>
 		<mapper resource="junjunggyu/book/support/BoardMap.xml"/>
+		<mapper resource="junjunggyu/book/support/NoticeMap.xml"/>
+		<mapper resource="junjunggyu/book/support/InquiryMap.xml"/>
 	</mappers>
 </configuration>
